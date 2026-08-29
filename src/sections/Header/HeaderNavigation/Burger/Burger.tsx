@@ -1,8 +1,16 @@
 import styles from './Burger.module.less'
 
-export const Burger = () => {
+type BurgerProps = {
+    onClick?: () => void
+}
+
+export const Burger = ({ onClick }: BurgerProps) => {
     return (
-        <button type="button" className="d-flex flex-column gap-1 border-0 bg-transparent p-0">
+        <button
+            type="button"
+            className={`gap-1 border-0 bg-transparent ${styles.burger}`}
+            onClick={onClick}
+        >
             <span className={styles.line} />
             <span className={styles.line} />
         </button>

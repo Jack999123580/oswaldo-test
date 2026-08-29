@@ -1,16 +1,26 @@
+import { useBurgerModal } from '../../../hooks'
 import HeroLogo from './assets/logo.svg'
 import { Burger } from './Burger'
 import styles from './HeaderNavigation.module.less'
 
 export const HeaderNavigation = () => {
+    const openBurgerModal = useBurgerModal()
+
     return (
-        <header className={styles.navigation}>
-            <div className="container-fluid px-2.5">
-                <div className="d-flex justify-content-between align-items-center">
-                    <img src={HeroLogo} alt="Rasta Market" className={styles.logo} />
-                    <Burger />
-                </div>
+        <header
+            className={`${styles.navigation} d-flex justify-content-between align-items-center h-100`}
+        >
+            <div className="d-flex align-items-center">
+                <img src={HeroLogo} alt="Rasta Market" className={styles.logo} />
+                <nav className={styles.links} aria-label="Основная навигация">
+                    <a href="#vacancies">Вакансии</a>
+                    <a href="#buy">Купить товар</a>
+                </nav>
             </div>
+            <Burger onClick={openBurgerModal} />
+            <button type="button" className={styles.login}>
+                Войти
+            </button>
         </header>
     )
 }

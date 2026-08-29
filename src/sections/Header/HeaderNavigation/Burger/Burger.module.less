@@ -1,3 +1,15 @@
+@import '@styles/utils/_sizes.less';
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+
+    @media (min-width: @mobile-max) {
+        display: none;
+    }
+}
+
 .line {
     display: block;
     width: 17px;
