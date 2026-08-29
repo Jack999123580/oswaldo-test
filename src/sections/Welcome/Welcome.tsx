@@ -1,6 +1,6 @@
 import { BurgerModalProvider } from '../../contexts'
-import { PathToMoney } from '../PathToMoney'
 import { Hero } from './Hero'
+import { PathToMoney } from './PathToMoney'
 import styles from './Welcome.module.less'
 
 export const Welcome = () => {
