@@ -1,0 +1,1 @@
+export { PathToMoney } from './PathToMoney'
