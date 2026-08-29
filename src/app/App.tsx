@@ -1,9 +1,9 @@
-import TestComponent from '../components/TestComponent'
+import { Header } from '../sections/Header'
 
 const App = () => {
     return (
         <>
-            <TestComponent />
+            <Header />
         </>
     )
 }

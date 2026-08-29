@@ -1,11 +1,22 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+
+import '@styles/index.less'
+
 import App from './App'
 
-import "@styles/index.less"
+const container = document.getElementById('root')
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+if (!container) {
+    throw new Error('React root container not found')
+}
+
+const root = createRoot(container)
+
+root.render(
+    <StrictMode>
+        <App />
+    </StrictMode>,
 )
