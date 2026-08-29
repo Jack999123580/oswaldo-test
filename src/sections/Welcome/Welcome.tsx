@@ -8,7 +8,7 @@ export const Welcome = () => {
         <BurgerModalProvider>
             <section className={styles.header}>
                 <div className={styles.background} />
-                <div className={styles.content}>
+                <div className={`position-relative w-100 d-flex flex-column ${styles.content}`}>
                     <Hero />
                     <PathToMoney />
                 </div>

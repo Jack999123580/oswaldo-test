@@ -7,13 +7,15 @@ import { Title } from './Title'
 
 export const PathToMoney = () => {
     return (
-        <section className={`${styles.pathToMoney} d-flex flex-column align-items-center px-3`}>
-            <div className={styles.headline}>
-                <img src={catIcon} className={styles.cat} />
+        <section
+            className={`${styles.pathToMoney} d-flex flex-column flex-grow-1 justify-content-center align-items-center px-3`}
+        >
+            <div className="position-relative">
+                <img src={catIcon} className={`position-absolute z-2 ${styles.cat}`} />
                 <Title />
-                <img src={arrowIcon} className={styles.arrow} alt="" />
-                <div className={styles.bitcoin}>
-                    <img src={bitcoinIcon} alt="" />
+                <img src={arrowIcon} className={`position-absolute z-1 ${styles.arrow}`} alt="" />
+                <div className={`position-absolute z-2 ${styles.bitcoin}`}>
+                    <img src={bitcoinIcon} className="d-block" alt="" />
                 </div>
             </div>
             <ActionButtons />

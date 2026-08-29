@@ -1,28 +1,45 @@
+@import '@styles/utils/_sizes.less';
+
 .pathToMoney {
     padding-top: 120px;
     padding-bottom: 40px;
     gap: 7rem;
-}
 
-.headline {
-    position: relative;
-}
-
-.cat,
-.bitcoin,
-.arrow {
-    position: absolute;
-}
-
-.cat {
-    top: -50px;
-    left: 10px;
-    transform: rotate(-13deg);
+    @media (min-width: @desktop-min) {
+        padding-top: 160px;
+        padding-bottom: 60px;
+        gap: 96px;
+    }
 }
 
 .arrow {
     right: 111px;
     bottom: -36px;
+    width: 73px;
+    height: 28px;
+
+    @media (min-width: @desktop-min) {
+        right: 302px;
+        bottom: -72px;
+        width: 150px;
+        height: 58px;
+        transform: scale(1.2);
+    }
+}
+
+.cat {
+    top: -50px;
+    left: 10px;
+    width: 56px;
+    height: 56px;
+    transform: rotate(-13deg);
+
+    @media (min-width: @desktop-min) {
+        top: -84px;
+        left: 12px;
+        width: 143px;
+        height: 143px;
+    }
 }
 
 .bitcoin {
@@ -31,6 +48,18 @@
     mix-blend-mode: screen;
 
     img {
+        width: 107px;
+        height: 93px;
         transform: rotate(9deg);
+    }
+
+    @media (min-width: @desktop-min) {
+        right: 14px;
+        bottom: -111px;
+
+        img {
+            width: 218px;
+            height: 190px;
+        }
     }
 }

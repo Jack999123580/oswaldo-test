@@ -1,12 +1,28 @@
 @import '@styles/utils/_colors.less';
+@import '@styles/utils/_sizes.less';
+
+.buttons {
+    @media (min-width: @desktop-min) {
+        width: auto;
+        gap: 16px;
+        padding-top: 85px;
+    }
+}
 
 .primary,
 .secondary {
     flex: 1;
     min-width: 0;
     padding: 11px 12px;
-    line-height: 1.2;
-    appearance: none;
+    border-radius: 16px;
+    margin-right: 8px;
+
+    @media (min-width: @desktop-min) {
+        flex: 0 0 auto;
+        min-width: auto;
+        padding: 14px 28px;
+        font-size: 16px;
+    }
 }
 
 .primary {

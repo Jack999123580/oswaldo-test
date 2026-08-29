@@ -7,7 +7,7 @@ export const Title = () => {
         >
             <span className={styles.line}>Твой путь</span>
             <span
-                className={`${styles.line} ${styles.highlight} d-inline-block py-1 text-black text-nowrap`}
+                className={`${styles.line} ${styles.highlight} d-inline-block text-black text-nowrap`}
             >
                 К большим деньгам
             </span>

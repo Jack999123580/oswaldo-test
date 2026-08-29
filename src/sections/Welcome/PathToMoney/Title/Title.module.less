@@ -1,10 +1,16 @@
 @import '@styles/utils/_colors.less';
 @import '@styles/utils/_fonts.less';
+@import '@styles/utils/_sizes.less';
 
 .title {
     gap: 6px;
     font-size: 20px;
     line-height: 1.05;
+
+    @media (min-width: @desktop-min) {
+        gap: 10px;
+        font-size: 52px;
+    }
 }
 
 .line {
@@ -13,11 +19,14 @@
 }
 
 .highlight {
-    padding-left: 6px;
-    padding-right: 6px;
+    padding: 4px 6px;
     background-color: @branding-color;
     transform: rotate(-2deg);
     transform-origin: center;
+
+    @media (min-width: @desktop-min) {
+        padding: 6px 14px;
+    }
 }
 
 .accent {

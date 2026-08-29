@@ -1,3 +1,5 @@
+@import '@styles/utils/_sizes.less';
+
 .header {
     position: relative;
     z-index: 0;
@@ -19,6 +21,7 @@
 }
 
 .content {
-    position: relative;
-    width: 100%;
+    @media (min-width: @desktop-min) {
+        min-height: 100dvh;
+    }
 }
