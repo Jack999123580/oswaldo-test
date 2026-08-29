@@ -2,13 +2,13 @@ import { LoginButton } from '../../../components/LoginButton'
 import { useBurgerModal } from '../../../hooks'
 import HeroLogo from './assets/logo.svg'
 import { Burger } from './Burger'
-import styles from './HeaderNavigation.module.less'
+import styles from './Hero.module.less'
 
-export const HeaderNavigation = () => {
+export const Hero = () => {
     const openBurgerModal = useBurgerModal()
 
     return (
-        <header
+        <section
             className={`${styles.navigation} d-flex justify-content-between align-items-center h-100`}
         >
             <div className="d-flex align-items-center">
@@ -20,6 +20,6 @@ export const HeaderNavigation = () => {
             </div>
             <Burger onClick={openBurgerModal} />
             <LoginButton />
-        </header>
+        </section>
     )
 }

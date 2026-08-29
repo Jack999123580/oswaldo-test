@@ -1,6 +1,6 @@
 import { createContext, useCallback, useMemo, useState, type PropsWithChildren } from 'react'
 
-import { BurgerModal } from '../sections/Header/HeaderNavigation/BurgerModal/BurgerModal'
+import { BurgerModal } from '../sections/Welcome/Hero/BurgerModal/BurgerModal'
 
 type BurgerModalContextValue = {
     openBurgerModal: () => void

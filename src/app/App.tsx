@@ -1,9 +1,9 @@
-import { Header } from '../sections/Header'
+import { Welcome } from '../sections/Welcome'
 
 const App = () => {
     return (
         <>
-            <Header />
+            <Welcome />
         </>
     )
 }

@@ -1,15 +1,15 @@
 import { BurgerModalProvider } from '../../contexts'
 import { PathToMoney } from '../PathToMoney'
-import styles from './Header.module.less'
-import { HeaderNavigation } from './HeaderNavigation'
+import { Hero } from './Hero'
+import styles from './Welcome.module.less'
 
-export const Header = () => {
+export const Welcome = () => {
     return (
         <BurgerModalProvider>
             <section className={styles.header}>
                 <div className={styles.background} />
                 <div className={styles.content}>
-                    <HeaderNavigation />
+                    <Hero />
                     <PathToMoney />
                 </div>
             </section>
