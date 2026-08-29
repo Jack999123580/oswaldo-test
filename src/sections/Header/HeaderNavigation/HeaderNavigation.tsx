@@ -1,3 +1,4 @@
+import { LoginButton } from '../../../components/LoginButton'
 import { useBurgerModal } from '../../../hooks'
 import HeroLogo from './assets/logo.svg'
 import { Burger } from './Burger'
@@ -18,9 +19,7 @@ export const HeaderNavigation = () => {
                 </nav>
             </div>
             <Burger onClick={openBurgerModal} />
-            <button type="button" className={styles.login}>
-                Войти
-            </button>
+            <LoginButton />
         </header>
     )
 }
