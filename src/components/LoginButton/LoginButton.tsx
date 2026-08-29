@@ -1,9 +1,6 @@
+import { Button } from '../Button'
 import styles from './LoginButton.module.less'
 
 export const LoginButton = () => {
-    return (
-        <button type="button" className={styles.login}>
-            Войти
-        </button>
-    )
+    return <Button className={styles.login}>Войти</Button>
 }

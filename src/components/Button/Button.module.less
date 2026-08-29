@@ -1,0 +1,45 @@
+@import '@styles/utils/_colors.less';
+@import '@styles/utils/_sizes.less';
+
+.button {
+    font-weight: 500;
+    white-space: nowrap;
+    text-align: center;
+    box-shadow: none;
+    padding: 11px 12px;
+    border-radius: 16px;
+    border: 1.5px solid @branding-color;
+
+    @media (min-width: @desktop-min) {
+        padding: 14px 28px;
+        font-size: 16px;
+    }
+}
+
+.primary {
+    color: #000;
+    background-color: @branding-color;
+
+    &:hover,
+    &:focus,
+    &:focus-visible,
+    &:active {
+        color: #000;
+        background-color: @branding-color;
+        box-shadow: none;
+    }
+}
+
+.outline {
+    color: #fff;
+    background-color: transparent;
+
+    &:hover,
+    &:focus,
+    &:focus-visible,
+    &:active {
+        color: #fff;
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
