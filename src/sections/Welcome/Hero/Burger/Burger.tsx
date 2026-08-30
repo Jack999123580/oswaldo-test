@@ -1,3 +1,5 @@
+import cn from 'classnames'
+
 import styles from './Burger.module.less'
 
 type BurgerProps = {
@@ -8,7 +10,7 @@ export const Burger = ({ onClick }: BurgerProps) => {
     return (
         <button
             type="button"
-            className={`gap-1 border-0 bg-transparent ${styles.burger}`}
+            className={cn(styles.burger, 'gap-1 border-0 bg-transparent')}
             onClick={onClick}
         >
             <span className={styles.line} />

@@ -1,3 +1,5 @@
+import cn from 'classnames'
+
 import { BurgerModalProvider } from '../../contexts'
 import { Hero } from './Hero'
 import { PathToMoney } from './PathToMoney'
@@ -8,7 +10,7 @@ export const Welcome = () => {
         <BurgerModalProvider>
             <section className={styles.header}>
                 <div className={styles.background} />
-                <div className={`position-relative w-100 d-flex flex-column ${styles.content}`}>
+                <div className={cn(styles.content, 'position-relative w-100 d-flex flex-column')}>
                     <Hero />
                     <PathToMoney />
                 </div>

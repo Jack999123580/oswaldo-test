@@ -1,3 +1,4 @@
+import cn from 'classnames'
 import type { ButtonHTMLAttributes } from 'react'
 
 import styles from './Button.module.less'
@@ -16,7 +17,7 @@ export const Button = ({
     return (
         <button
             type={type}
-            className={`${styles.button} ${outline ? styles.outline : styles.primary}${className ? ` ${className}` : ''}`}
+            className={cn(styles.button, outline ? styles.outline : styles.primary, className)}
             {...props}
         >
             {children}

@@ -1,4 +1,5 @@
 import { Range, Root, Thumb, Track } from '@radix-ui/react-slider'
+import cn from 'classnames'
 import { useId, useState } from 'react'
 
 import styles from './RangeInput.module.less'
@@ -13,7 +14,6 @@ type RangeInputProps = {
     onValueChange?: (value: number) => void
     disabled?: boolean
     name?: string
-    className?: string
 }
 
 export const RangeInput = ({
@@ -26,24 +26,17 @@ export const RangeInput = ({
     onValueChange,
     disabled,
     name,
-    className,
 }: RangeInputProps) => {
     const labelId = useId()
     const [internalValue, setInternalValue] = useState(value ?? defaultValue ?? min)
-    const currentValue = value ?? internalValue
 
-    const handleValueChange = (values: number[]) => {
-        const next = values[0] ?? min
-
-        if (value === undefined) {
-            setInternalValue(next)
-        }
-
-        onValueChange?.(next)
+    const handleValueChange = ([value]: number[]) => {
+        setInternalValue(value)
+        onValueChange?.(value)
     }
 
     return (
-        <div className={`${styles.root}${className ? ` ${className}` : ''}`}>
+        <div className={styles.root}>
             {label ? (
                 <span className={styles.label} id={labelId}>
                     {label}
@@ -56,11 +49,10 @@ export const RangeInput = ({
                         min={min}
                         max={max}
                         step={step}
-                        value={[currentValue]}
+                        value={[internalValue]}
                         onValueChange={handleValueChange}
                         disabled={disabled}
                         name={name}
-                        aria-labelledby={label ? labelId : undefined}
                     >
                         <Track className={styles.track}>
                             <Range className={styles.range} />
@@ -68,7 +60,7 @@ export const RangeInput = ({
                         <Thumb className={styles.thumb} />
                     </Root>
                 </div>
-                <span className={`d-none d-lg-block ${styles.value}`}>{currentValue}</span>
+                <span className={cn(styles.value, 'd-none d-lg-block')}>{internalValue}</span>
             </div>
         </div>
     )

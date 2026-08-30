@@ -1,3 +1,4 @@
+import cn from 'classnames'
 import type { FC, HTMLAttributes } from 'react'
 
 import styles from './CircleGradient.module.less'
@@ -23,11 +24,5 @@ export const CircleGradient: FC<CircleGradientProps> = ({
         ...style,
     }
 
-    return (
-        <span
-            className={`${styles.circle}${className ? ` ${className}` : ''}`}
-            style={gradientStyle}
-            {...props}
-        />
-    )
+    return <span className={cn(styles.circle, className)} style={gradientStyle} {...props} />
 }

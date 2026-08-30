@@ -1,3 +1,4 @@
+import cn from 'classnames'
 import { useSnackbar } from 'notistack'
 import { useState } from 'react'
 
@@ -46,7 +47,7 @@ export const Calculator = () => {
                 <div className="row gx-0 gx-lg-4 gy-4">
                     <div className="col-12 col-lg-7">
                         <div className="d-flex flex-column gap-3 gap-lg-4">
-                            <h2 className={`${styles.title} fs-5 fs-lg-2 mb-0`}>
+                            <h2 className={cn(styles.title, 'fs-5 fs-lg-2 mb-0')}>
                                 <span>Калькулятор</span>
                                 <span>твоего заработка</span>
                             </h2>
@@ -86,7 +87,7 @@ export const Calculator = () => {
                             </div>
 
                             <Button
-                                className={`${styles.submit} align-self-start  mb-4`}
+                                className={cn(styles.submit, 'align-self-start  mb-4')}
                                 onClick={handleCalculate}
                             >
                                 Рассчитать доход
@@ -108,8 +109,8 @@ export const Calculator = () => {
                             <div className={styles.glowContainer}>
                                 <CircleGradient blur={80} className={styles.glow} />
                             </div>
-                            <p className={`${styles.resultLabel} mb-0`}>Ты заработаешь</p>
-                            <p className={`${styles.resultValue} fs-2 fs-lg-1 mb-0`}>
+                            <p className={cn(styles.resultLabel, 'mb-0')}>Ты заработаешь</p>
+                            <p className={cn(styles.resultValue, 'fs-2 fs-lg-1 mb-0')}>
                                 {formatNumberWithSpaces(income)} ₽
                             </p>
                         </div>

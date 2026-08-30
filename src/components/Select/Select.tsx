@@ -10,6 +10,7 @@ import {
     Viewport,
 } from '@radix-ui/react-select'
 
+import { ChevronDown } from './ChevronDown'
 import { Placeholder } from './Placeholder'
 import styles from './Select.module.less'
 
@@ -68,15 +69,3 @@ export const Select = ({
         </Root>
     )
 }
-
-const ChevronDown = () => (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-            d="M4 6L8 10L12 6"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        />
-    </svg>
-)
