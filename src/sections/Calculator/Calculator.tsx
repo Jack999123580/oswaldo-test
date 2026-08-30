@@ -9,16 +9,7 @@ import leafLeftBottom from './assets/leafLeftBottom.svg'
 import leafMiddle from './assets/leafMiddle.svg'
 import leafTopRight from './assets/leafTopRight.svg'
 import styles from './Calculator.module.less'
-
-const CITY_OPTIONS = [
-    { value: 'moscow', label: 'Москва' },
-    { value: 'spb', label: 'Санкт-Петербург' },
-]
-
-const WEIGHT_OPTIONS = [
-    { value: '100', label: '100 г' },
-    { value: '200', label: '200 г' },
-]
+import { CITY_OPTIONS, WEIGHT_OPTIONS } from './constants'
 
 export const Calculator = () => {
     return (

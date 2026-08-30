@@ -10,6 +10,7 @@ import {
     Viewport,
 } from '@radix-ui/react-select'
 
+import { Placeholder } from './Placeholder'
 import styles from './Select.module.less'
 
 export type SelectOption = {
@@ -47,7 +48,10 @@ export const Select = ({
             name={name}
         >
             <Trigger className={`${styles.trigger}${className ? ` ${className}` : ''}`}>
-                <Value placeholder={placeholder} className={styles.value} />
+                <Value
+                    placeholder={value || <Placeholder>{placeholder}</Placeholder>}
+                    className={styles.value}
+                />
                 <Icon className={styles.icon}>
                     <ChevronDown />
                 </Icon>
