@@ -1,0 +1,1 @@
+export { CardOfWork } from './CardOfWork'

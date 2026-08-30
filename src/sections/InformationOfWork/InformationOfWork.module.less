@@ -1,0 +1,69 @@
+@import '@styles/variables/_sizes.less';
+
+.mixinGlowTop() {
+    position: absolute;
+    top: -140px;
+    right: -170px;
+    width: 180px;
+    height: 180px;
+
+    @media (min-width: @desktop-min) {
+        top: -50px;
+        right: -80px;
+        width: 220px;
+        height: 220px;
+        --circle-gradient-blur: 100px;
+    }
+}
+
+.mixinGlowBottom() {
+    position: absolute;
+    bottom: -20px;
+    left: -40px;
+    width: 80px;
+    height: 80px;
+
+    @media (min-width: @desktop-min) {
+        bottom: -90px;
+        left: -30px;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.row {
+    @media (min-width: @desktop-min) {
+        --bs-gutter-x: 20px;
+        --bs-gutter-y: 20px;
+    }
+}
+
+.workAnyPlace {
+    z-index: 2;
+}
+
+.glowTop {
+    .mixinGlowTop();
+}
+
+.glowBottom {
+    .mixinGlowBottom();
+}
+
+.glowMiddleCardTop {
+    .mixinGlowTop();
+
+    @media (min-width: @desktop-min) {
+        top: -140px;
+        right: -170px;
+    }
+}
+
+.glowMiddleCardBottom {
+    .mixinGlowBottom();
+
+    @media (min-width: @desktop-min) {
+        bottom: 15px;
+        left: -53px;
+    }
+}

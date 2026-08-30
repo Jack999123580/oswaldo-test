@@ -1,4 +1,5 @@
 import { Calculator } from '../sections/Calculator'
+import { InformationOfWork } from '../sections/InformationOfWork'
 import { Welcome } from '../sections/Welcome'
 
 const App = () => {
@@ -6,6 +7,7 @@ const App = () => {
         <>
             <Welcome />
             <Calculator />
+            <InformationOfWork />
         </>
     )
 }
