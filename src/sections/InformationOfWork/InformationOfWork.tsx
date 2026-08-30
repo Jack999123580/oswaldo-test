@@ -53,7 +53,9 @@ export const InformationOfWork = () => {
                     <CardOfWork
                         title={'Нет графика работы'}
                         description={'Поэтому можно совмещать работу и учебу с работой курьером'}
-                    />
+                    >
+                        <CircleGradient blur={80} className={styles.glowLastCardTop} />
+                    </CardOfWork>
                 </div>
             </div>
         </section>
