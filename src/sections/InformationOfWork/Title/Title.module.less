@@ -1,0 +1,46 @@
+@import '@styles/variables/_colors.less';
+@import '@styles/variables/_fonts.less';
+@import '@styles/variables/_sizes.less';
+
+.title {
+    width: 100%;
+    font-size: 24px;
+    line-height: 0.92;
+    font-family: @font-benzin, sans-serif;
+    font-weight: bold;
+
+    @media (min-width: @desktop-min) {
+        font-size: 28px;
+    }
+}
+
+.accent {
+    color: @branding-color;
+    transform: rotate(-1.2deg);
+}
+
+.work {
+    transform: rotate(-2.5deg);
+    position: relative;
+    z-index: 1;
+
+    color: #000000;
+
+    display: block;
+
+    padding: 12px 0px 8px 0px;
+    background-color: @branding-color;
+
+    margin: 20px 0;
+    @media (min-width: @desktop-min) {
+        padding: 17px 8px 3px;
+    }
+}
+
+.work ~ span {
+    margin-bottom: 15px;
+}
+
+.noPlan {
+    transform: rotate(-2.5deg);
+}

@@ -7,15 +7,14 @@ export const Title = () => {
         <p
             className={cn(
                 styles.title,
-                'd-flex flex-column m-0 fw-bold text-center text-uppercase text-white',
+                'd-flex flex-column m-0 fw-bold text-center text-uppercase text-white position-relative',
             )}
         >
-            <span className={cn(styles.line, styles.highlight, 'text-black text-nowrap')}>
-                Работай
-            </span>
-            <span className={cn(styles.line, styles.accent, 'text-nowrap')}>В свободное</span>
-            <span className={cn(styles.line, styles.accent, 'text-nowrap')}>Время</span>
-            <span className={cn(styles.line, 'text-nowrap')}>Без плана</span>
+            <div className={styles.work}>Работай</div>
+
+            <span className={styles.accent}>В свободное</span>
+            <span className={styles.accent}>Время</span>
+            <span className={styles.noPlan}>Без плана</span>
         </p>
     )
 }

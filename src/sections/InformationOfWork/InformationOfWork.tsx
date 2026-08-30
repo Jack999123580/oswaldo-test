@@ -2,11 +2,12 @@ import cn from 'classnames'
 
 import { CardOfWork } from '../../components/CardOfWork'
 import { CircleGradient } from '../../components/CircleGradient'
+import arrowIcon from './assets/arrow.svg'
 import hand from './assets/hand.png' // ломается при экспорте в svg из-за заливок и масок
 import spaceStars from './assets/spaceStars.svg' // в фигме выглядит норм, но в превью не так, как смог сгладил углы
 import workAnyPlace from './assets/workAnyPlace.png' // ломается при экспорте в svg
-
 import styles from './InformationOfWork.module.less'
+import { Title } from './Title'
 
 export const InformationOfWork = () => {
     return (
@@ -54,6 +55,21 @@ export const InformationOfWork = () => {
                         title={'Нет графика работы'}
                         description={'Поэтому можно совмещать работу и учебу с работой курьером'}
                     >
+                        <div
+                            className={cn(
+                                styles.headline,
+                                'd-flex justify-content-center align-items-center',
+                            )}
+                        >
+                            <div className={cn(styles.headlineBlock, 'position-relative')}>
+                                <Title />
+                                <img
+                                    src={arrowIcon}
+                                    className={cn(styles.arrow, 'position-absolute z-1')}
+                                    alt=""
+                                />
+                            </div>
+                        </div>
                         <CircleGradient blur={80} className={styles.glowLastCardTop} />
                     </CardOfWork>
                 </div>
