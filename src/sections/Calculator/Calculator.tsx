@@ -62,7 +62,7 @@ export const Calculator = () => {
                         </div>
                     </div>
 
-                    <div className="col-12 col-lg-5">
+                    <div className="col-12 col-lg-5 mt-4">
                         <div className={styles.result}>
                             <CircleGradient blur={80} className={styles.glowFront} />
                             <img src={leafTopRight} alt="" className={styles.leafTopRight} />

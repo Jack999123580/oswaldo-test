@@ -54,10 +54,10 @@
 
     @media (min-width: @desktop-min) {
         top: 140px;
-        right: -191px;
-        width: 425px;
-        height: 425px;
-        --circle-gradient-blur: 130px;
+        right: -427px;
+        width: 350px;
+        height: 350px;
+        --circle-gradient-blur: 150px;
     }
 }
 
@@ -111,6 +111,11 @@
     position: absolute;
     right: 96px;
     top: 67px;
+
+    @media (min-width: @desktop-min) {
+        right: 272px;
+        top: 99px;
+    }
 }
 
 .leafLeftBottom {
@@ -138,4 +143,9 @@
     top: 120px;
     left: -3px;
     filter: blur(1px);
+
+    @media (min-width: @desktop-min) {
+        top: 214px;
+        left: -1px;
+    }
 }
