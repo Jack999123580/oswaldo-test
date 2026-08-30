@@ -57,6 +57,7 @@ export const Calculator = () => {
 
                     <div className="col-12 col-lg-5">
                         <div className={styles.result}>
+                            <span className={styles.glow} />
                             <p className={`${styles.resultLabel} mb-0`}>Ты заработаешь</p>
                             <p className={`${styles.resultValue} fs-2 fs-lg-1 mb-0`}>900 000 ₽</p>
                         </div>
