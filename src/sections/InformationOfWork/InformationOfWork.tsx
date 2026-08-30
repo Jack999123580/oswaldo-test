@@ -3,6 +3,7 @@ import cn from 'classnames'
 import { CardOfWork } from '../../components/CardOfWork'
 import { CircleGradient } from '../../components/CircleGradient'
 import workAnyPlace from './assets/workAnyPlace.png' // ломается при экспорте в svg
+import hand from './assets/hand.png' // ломается при экспорте в svg из-за заливок и масок
 import styles from './InformationOfWork.module.less'
 
 export const InformationOfWork = () => {
@@ -19,9 +20,9 @@ export const InformationOfWork = () => {
                         {' '}
                         <div className="d-flex justify-content-center">
                             <img
-                                className={cn(styles.workAnyPlace, 'position-absolute')}
+                                className={cn(styles.background, 'position-absolute')}
                                 src={workAnyPlace}
-                            ></img>
+                            />
                         </div>
                         <CircleGradient blur={80} className={styles.glowTop} />
                         <CircleGradient blur={80} className={styles.glowBottom} />
@@ -34,6 +35,10 @@ export const InformationOfWork = () => {
                             'Мы давно в деле, поэтому научим вас зарабатывать много и безопасно'
                         }
                     >
+                        <img
+                            className={cn(styles.background, 'position-absolute')}
+                            src={hand}
+                        />
                         <CircleGradient blur={80} className={styles.glowMiddleCardTop} />
                         <CircleGradient blur={80} className={styles.glowMiddleCardBottom} />
                     </CardOfWork>
