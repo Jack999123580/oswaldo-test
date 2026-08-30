@@ -47,7 +47,7 @@ export const Calculator = () => {
                                 />
                             </div>
 
-                            <Button className={`${styles.submit} align-self-start`}>
+                            <Button className={`${styles.submit} align-self-start  mb-4`}>
                                 Рассчитать доход
                             </Button>
                         </div>

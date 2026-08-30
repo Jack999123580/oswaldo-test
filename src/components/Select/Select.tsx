@@ -26,7 +26,6 @@ type SelectProps = {
     onValueChange?: (value: string) => void
     disabled?: boolean
     name?: string
-    className?: string
 }
 
 export const Select = ({
@@ -37,7 +36,6 @@ export const Select = ({
     onValueChange,
     disabled,
     name,
-    className,
 }: SelectProps) => {
     return (
         <Root
@@ -47,7 +45,7 @@ export const Select = ({
             disabled={disabled}
             name={name}
         >
-            <Trigger className={`${styles.trigger}${className ? ` ${className}` : ''}`}>
+            <Trigger className={styles.trigger}>
                 <Value
                     placeholder={value || <Placeholder>{placeholder}</Placeholder>}
                     className={styles.value}
