@@ -7,6 +7,14 @@ export default defineConfig({
     build: {
         outDir: './dist/app',
     },
+    css: {
+        preprocessorOptions: {
+            scss: {
+                silenceDeprecations: ['import', 'global-builtin', 'color-functions'],
+                quietDeps: true,
+            },
+        },
+    },
     plugins: [react()],
     resolve: {
         alias: {
