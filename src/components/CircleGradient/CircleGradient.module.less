@@ -1,0 +1,9 @@
+@import '@styles/variables/_colors.less';
+
+.circle {
+    display: block;
+    background-color: @branding-color;
+    // border-radius: 50%;
+    filter: blur(var(--circle-gradient-blur, var(--circle-gradient-blur-prop)));
+    pointer-events: none;
+}

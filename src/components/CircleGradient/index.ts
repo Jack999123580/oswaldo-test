@@ -1,0 +1,1 @@
+export { CircleGradient } from './CircleGradient'
