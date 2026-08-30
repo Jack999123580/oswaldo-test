@@ -1,6 +1,16 @@
+import type { FC } from 'react'
+
 import { Button } from '../Button'
 import styles from './LoginButton.module.less'
 
-export const LoginButton = () => {
-    return <Button className={styles.login}>Войти</Button>
+type LoginButtonProps = {
+    onClick: () => void
+}
+
+export const LoginButton: FC<LoginButtonProps> = ({ onClick }) => {
+    return (
+        <Button onClick={onClick} className={styles.login}>
+            Войти
+        </Button>
+    )
 }

@@ -1,6 +1,12 @@
 import { Button } from '../../components/Button'
 import { RangeInput } from '../../components/RangeInput'
 import { Select } from '../../components/Select'
+import dollarImage from './assets/dollar.svg'
+import leafCenter from './assets/leafCenter.svg'
+import leafFront from './assets/leafFront.svg'
+import leafMiddle from './assets/leafMiddle.svg'
+import leafTopRight from './assets/leafTopRight.svg'
+import leftBottom from './assets/leftBottom.svg'
 import styles from './Calculator.module.less'
 
 const CITY_OPTIONS = [
@@ -57,7 +63,18 @@ export const Calculator = () => {
 
                     <div className="col-12 col-lg-5">
                         <div className={styles.result}>
-                            <span className={styles.glow} />
+                            <span className={styles.glowFront} />
+                            <img src={leafTopRight} alt="" className={styles.leafTopRight} />
+                            <img src={leafCenter} alt="" className={styles.leafCenter} />
+                            <img src={leftBottom} alt="" className={styles.leafLeftBottom} />
+                            <img src={leafMiddle} alt="" className={styles.leafMiddle} />
+
+                            <img src={leafFront} alt="" className={styles.leafFront} />
+
+                            <img src={dollarImage} alt="" className={styles.dollar} />
+                            <div className={styles.glowContainer}>
+                                <span className={styles.glow} />
+                            </div>
                             <p className={`${styles.resultLabel} mb-0`}>Ты заработаешь</p>
                             <p className={`${styles.resultValue} fs-2 fs-lg-1 mb-0`}>900 000 ₽</p>
                         </div>
