@@ -1,4 +1,5 @@
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+import { SnackbarProvider } from 'notistack'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 
@@ -18,6 +19,8 @@ const root = createRoot(container)
 
 root.render(
     <StrictMode>
-        <App />
+        <SnackbarProvider autoHideDuration={5000}>
+            <App />
+        </SnackbarProvider>
     </StrictMode>,
 )

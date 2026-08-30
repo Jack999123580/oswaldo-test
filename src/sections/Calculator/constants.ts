@@ -12,3 +12,5 @@ export const WEIGHT_OPTIONS = [
     { value: '1', label: '1 г' },
     { value: '2', label: '2 г' },
 ]
+
+export const PRICE_PER_GRAM = 1600
