@@ -2,8 +2,10 @@ import cn from 'classnames'
 
 import { CardOfWork } from '../../components/CardOfWork'
 import { CircleGradient } from '../../components/CircleGradient'
-import workAnyPlace from './assets/workAnyPlace.png' // ломается при экспорте в svg
 import hand from './assets/hand.png' // ломается при экспорте в svg из-за заливок и масок
+import spaceStars from './assets/spaceStars.svg' // в фигме выглядит норм, но в превью не так, как смог сгладил углы
+import workAnyPlace from './assets/workAnyPlace.png' // ломается при экспорте в svg
+
 import styles from './InformationOfWork.module.less'
 
 export const InformationOfWork = () => {
@@ -36,7 +38,11 @@ export const InformationOfWork = () => {
                         }
                     >
                         <img
-                            className={cn(styles.background, 'position-absolute')}
+                            className={cn(styles.spaceStars, 'position-absolute')}
+                            src={spaceStars}
+                        />
+                        <img
+                            className={cn(styles.background, styles.hand, 'position-absolute')}
                             src={hand}
                         />
                         <CircleGradient blur={80} className={styles.glowMiddleCardTop} />
