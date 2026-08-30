@@ -17,7 +17,7 @@ export const Title = () => {
                     styles.highlight,
                     'd-inline-block text-black text-nowrap',
                 )}
-            />
+            >
                 К большим деньгам
             </span>
             <span className={styles.line}>начинается</span>
