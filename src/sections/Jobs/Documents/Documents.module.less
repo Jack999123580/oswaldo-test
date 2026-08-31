@@ -1,4 +1,10 @@
+@import '@styles/variables/_sizes.less';
+
 .card {
-    min-height: 200px;
+    min-height: 176px;
     background-color: #0e1116;
+
+    @media (min-width: @desktop-min) {
+        min-height: 286px;
+    }
 }

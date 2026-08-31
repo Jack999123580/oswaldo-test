@@ -1,15 +1,43 @@
 @import '@styles/variables/_fonts.less';
+@import '@styles/variables/_sizes.less';
 
 .glow {
     width: 80px;
     height: 80px;
+
+    // @media (min-width: @desktop-min) {
+    //     width: 180px;
+    //     height: 180px;
+    // }
 }
 
 .card {
-    min-height: 200px;
+    min-height: 176px;
     background-color: #0e1116;
-    padding: 16px 0 0px 16px;
+    padding: 16px;
     color: #fff;
+
+    @media (min-width: @desktop-min) {
+        min-height: 294px;
+        min-width: 532px;
+        padding: 32px 40px;
+    }
+}
+
+.background {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.stars {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
 }
 
 .glowTop {
@@ -21,27 +49,43 @@
 .glowBottom {
     .glow();
     bottom: 0;
-    right: 0px;
-}
-
-.content {
-    z-index: 1;
+    right: 0;
 }
 
 .title {
     font-family: @font-benzin, sans-serif;
     font-size: 14px;
     margin-bottom: 6px;
+
+    @media (min-width: @desktop-min) {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
 }
 
 .subtitle {
     font-size: 12px;
     line-height: 15px;
+
+    @media (min-width: @desktop-min) {
+        font-size: 16px;
+        line-height: 1.3;
+    }
+}
+
+.visual {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    @media (min-width: @desktop-min) {
+        transform: scale(1.7);
+    }
 }
 
 .leafRight {
     position: absolute;
     right: 0;
+    bottom: 0;
     z-index: 7;
 }
 
@@ -56,7 +100,6 @@
     position: absolute;
     right: 46px;
     bottom: 0;
-
     z-index: 5;
 }
 
@@ -69,7 +112,7 @@
 
 .frontDollar {
     position: absolute;
-    right: 15px;
+    right: 0;
     bottom: 0;
     z-index: 6;
 }
@@ -88,4 +131,9 @@
     right: 0;
     bottom: 0;
     z-index: 6;
+
+    @media (min-width: @desktop-min) {
+        width: 120px;
+        height: 120px;
+    }
 }
