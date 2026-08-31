@@ -1,4 +1,47 @@
+@import '@styles/variables/_fonts.less';
+
 .card {
     min-height: 294px;
     background-color: #0e1116;
+    color: #fff;
+}
+
+.title {
+    font-family: @font-benzin, sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+    font-size: 24px;
+}
+
+.description {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.card {
+    padding: 1.5rem 1.125rem;
+}
+
+.background {
+    left: 74px;
+    bottom: -92px;
+}
+
+.glow {
+    // position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 110px;
+    height: 110px;
+    z-index: 1;
+    --circle-gradient-blur: 140px;
+}
+
+.actions {
+    position: relative;
+}
+
+.goToTeam {
+    margin-bottom: 8px;
+    display: block;
 }

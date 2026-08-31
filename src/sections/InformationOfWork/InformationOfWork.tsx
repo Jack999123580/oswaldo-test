@@ -1,11 +1,11 @@
 import cn from 'classnames'
 
-import { CardOfWork } from '../../components/CardOfWork'
 import { CircleGradient } from '../../components/CircleGradient'
 import arrowIcon from './assets/arrow.svg'
 import hand from './assets/hand.png' // ломается при экспорте в svg из-за заливок и масок
 import spaceStars from './assets/spaceStars.svg' // в фигме выглядит норм, но в превью не так, как смог сгладил углы
 import workAnyPlace from './assets/workAnyPlace.png' // ломается при экспорте в svg
+import { CardOfWork } from './CardOfWork'
 import styles from './InformationOfWork.module.less'
 import { Title } from './Title'
 
@@ -13,7 +13,7 @@ export const InformationOfWork = () => {
     return (
         <section className="container py-4 py-lg-5">
             <div className={cn(styles.row, 'row g-3 justify-content-lg-center')}>
-                <div className="col-12 col-lg-auto d-none d-lg-block">
+                <div className="col-12 col-lg-auto  d-lg-block">
                     <CardOfWork
                         title={'Оставляй клады — в любых удобных местах'}
                         description={
