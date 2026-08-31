@@ -1,0 +1,1 @@
+export { AboutUsMobile } from './AboutUsMobile'

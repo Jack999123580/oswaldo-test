@@ -1,0 +1,32 @@
+@import '@styles/variables/_fonts.less';
+
+.title {
+    font-family: @font-benzin, sans-serif;
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.glow {
+    width: 355px;
+    height: 355px;
+    z-index: 1;
+    right: -360px;
+    --circle-gradient-blur: 195px;
+}
+
+.content {
+    z-index: 1;
+}
+
+.goToTeam {
+    margin-right: 16px;
+}
+
+.description {
+    margin-bottom: 8px;
+    line-height: 19px;
+    &:last-of-type {
+        margin-bottom: 32px;
+    }
+}

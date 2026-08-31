@@ -1,0 +1,1 @@
+export { AboutUsDesktop } from './AboutUsDesktop'

@@ -13,7 +13,8 @@ $container-max-widths: (
     xl: 2440px,
 );
 
-$container-padding-x: 10px;
+$grid-gutter-width: 20px;
+$container-padding-x: 20px;
 
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/variables-dark';
