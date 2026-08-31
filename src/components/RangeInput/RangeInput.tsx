@@ -1,19 +1,17 @@
 import { Range, Root, Thumb, Track } from '@radix-ui/react-slider'
 import cn from 'classnames'
-import { useId, useState } from 'react'
+import { useState } from 'react'
 
 import styles from './RangeInput.module.less'
 
 type RangeInputProps = {
-    label?: string
+    label: string
     min?: number
     max?: number
     step?: number
     value?: number
     defaultValue?: number
     onValueChange?: (value: number) => void
-    disabled?: boolean
-    name?: string
 }
 
 export const RangeInput = ({
@@ -24,10 +22,7 @@ export const RangeInput = ({
     value,
     defaultValue,
     onValueChange,
-    disabled,
-    name,
 }: RangeInputProps) => {
-    const labelId = useId()
     const [internalValue, setInternalValue] = useState(value ?? defaultValue ?? min)
 
     const handleValueChange = ([value]: number[]) => {
@@ -37,11 +32,7 @@ export const RangeInput = ({
 
     return (
         <div className={styles.root}>
-            {label ? (
-                <span className={styles.label} id={labelId}>
-                    {label}
-                </span>
-            ) : null}
+            <span className={styles.label}>{label}</span>
             <div className="d-flex align-items-center gap-3">
                 <div className="flex-grow-1">
                     <Root
@@ -51,8 +42,6 @@ export const RangeInput = ({
                         step={step}
                         value={[internalValue]}
                         onValueChange={handleValueChange}
-                        disabled={disabled}
-                        name={name}
                     >
                         <Track className={styles.track}>
                             <Range className={styles.range} />
