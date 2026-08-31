@@ -1,4 +1,91 @@
+@import '@styles/variables/_fonts.less';
+
+.glow {
+    width: 80px;
+    height: 80px;
+}
+
 .card {
     min-height: 200px;
     background-color: #0e1116;
+    padding: 16px 0 0px 16px;
+    color: #fff;
+}
+
+.glowTop {
+    .glow();
+    left: -70px;
+    top: -10px;
+}
+
+.glowBottom {
+    .glow();
+    bottom: 0;
+    right: 0px;
+}
+
+.content {
+    z-index: 1;
+}
+
+.title {
+    font-family: @font-benzin, sans-serif;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.leafRight {
+    position: absolute;
+    right: 0;
+    z-index: 7;
+}
+
+.leafBottom {
+    position: absolute;
+    right: 82px;
+    bottom: 0;
+    z-index: 10;
+}
+
+.leafLeftMiddle {
+    position: absolute;
+    right: 46px;
+    bottom: 0;
+
+    z-index: 5;
+}
+
+.leafTopMiddle {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    z-index: 1;
+}
+
+.frontDollar {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    z-index: 6;
+}
+
+.backDollar {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    z-index: 0;
+}
+
+.imageGlow {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 0;
+    bottom: 0;
+    z-index: 6;
 }

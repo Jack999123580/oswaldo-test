@@ -9,7 +9,7 @@ export const Title = () => {
                 Выбери 1 из двух вариантов трудоустройства
             </p>
             <h2 className={cn(styles.title, 'mb-0 fw-bold text-uppercase text-white')}>
-                Устроится можно
+                Устроиться можно
             </h2>
         </div>
     )
