@@ -1,0 +1,36 @@
+@import '@styles/variables/_sizes.less';
+
+.background {
+    z-index: 2;
+}
+
+.glowTop {
+    position: absolute;
+    top: -140px;
+    right: -170px;
+    width: 180px;
+    height: 180px;
+
+    @media (min-width: @desktop-min) {
+        top: -50px;
+        right: -80px;
+        width: 220px;
+        height: 220px;
+        --circle-gradient-blur: 100px;
+    }
+}
+
+.glowBottom {
+    position: absolute;
+    bottom: -20px;
+    left: -40px;
+    width: 80px;
+    height: 80px;
+
+    @media (min-width: @desktop-min) {
+        bottom: -90px;
+        left: -30px;
+        width: 100px;
+        height: 100px;
+    }
+}

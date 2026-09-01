@@ -4,9 +4,9 @@ import { CircleGradient } from '../../components/CircleGradient'
 import arrowIcon from './assets/arrow.svg'
 import hand from './assets/hand.png' // ломается при экспорте в svg из-за заливок и масок
 import spaceStars from './assets/spaceStars.svg' // в макете фигмы выглядит норм, но в превью в фигме не так, как смог сгладил углы
-import workAnyPlace from './assets/workAnyPlace.png' // ломается при экспорте в svg
 import { CardOfWork } from './CardOfWork'
 import styles from './InformationOfWork.module.less'
+import { KladDesktop } from './KladDesktop'
 import { KladMobile } from './KladModbile'
 import { Title } from './Title'
 
@@ -15,23 +15,7 @@ export const InformationOfWork = () => {
         <section className="container py-4 py-lg-5">
             <div className={cn(styles.row, 'row g-3 justify-content-lg-center')}>
                 <div className="col-12 col-lg-auto  d-lg-block">
-                    <CardOfWork
-                        title={'Работай в любых местах,\nвсе в твоих руках'}
-                        description={
-                            'Например, клады прячут в парках, под деревьями и там, где нет камер'
-                        }
-                        className="d-none d-lg-flex"
-                    >
-                        {' '}
-                        <div className="d-flex justify-content-center">
-                            <img
-                                className={cn(styles.background, 'position-absolute')}
-                                src={workAnyPlace}
-                            />
-                        </div>
-                        <CircleGradient blur={80} className={styles.glowTop} />
-                        <CircleGradient blur={80} className={styles.glowBottom} />
-                    </CardOfWork>
+                    <KladDesktop />
                     <KladMobile />
                 </div>
                 <div className="col-12 col-lg-auto">
