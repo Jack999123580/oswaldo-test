@@ -32,25 +32,7 @@ export const InformationOfWork = () => {
                         <CircleGradient blur={80} className={styles.glowTop} />
                         <CircleGradient blur={80} className={styles.glowBottom} />
                     </CardOfWork>
-
-                    <CardOfWork
-                        title={'Оставляй клады —\n в любых удобных местах'}
-                        description={
-                            'Например, клады прячут в лифтах, в парках \n под деревьями и там, где нет камер'
-                        }
-                        className="d-lg-none"
-                    >
-                        <KladMobile />
-                        {/* {' '}
-                        <div className="d-flex justify-content-center">
-                            <img
-                                className={cn(styles.background, 'position-absolute')}
-                                src={workAnyPlace}
-                            />
-                        </div> */}
-                        {/* <CircleGradient blur={80} className={styles.glowTop} />
-                        <CircleGradient blur={80} className={styles.glowBottom} /> */}
-                    </CardOfWork>
+                    <KladMobile />
                 </div>
                 <div className="col-12 col-lg-auto">
                     <CardOfWork
