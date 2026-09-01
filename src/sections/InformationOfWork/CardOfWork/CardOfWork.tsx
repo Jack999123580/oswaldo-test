@@ -7,11 +7,12 @@ type CardOfWorkProps = {
     title: string
     description: string
     children?: ReactNode
+    className?: string
 }
 
-export const CardOfWork: FC<CardOfWorkProps> = ({ title, description, children }) => {
+export const CardOfWork: FC<CardOfWorkProps> = ({ title, description, className, children }) => {
     return (
-        <section className={cn(styles.card, 'd-flex flex-column overflow-hidden h-100')}>
+        <section className={cn(styles.card, className, 'd-flex flex-column overflow-hidden h-100')}>
             {children && <div className={styles.effects}>{children}</div>}
             <div className={cn(styles.visual, 'flex-grow-1')} />
             <div className={cn(styles.content, 'd-flex flex-column gap-2 p-3 p-lg-4')}>

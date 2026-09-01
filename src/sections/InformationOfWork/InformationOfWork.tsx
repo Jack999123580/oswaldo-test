@@ -7,6 +7,7 @@ import spaceStars from './assets/spaceStars.svg' // в макете фигмы �
 import workAnyPlace from './assets/workAnyPlace.png' // ломается при экспорте в svg
 import { CardOfWork } from './CardOfWork'
 import styles from './InformationOfWork.module.less'
+import { KladMobile } from './KladModbile'
 import { Title } from './Title'
 
 export const InformationOfWork = () => {
@@ -15,10 +16,11 @@ export const InformationOfWork = () => {
             <div className={cn(styles.row, 'row g-3 justify-content-lg-center')}>
                 <div className="col-12 col-lg-auto  d-lg-block">
                     <CardOfWork
-                        title={'Оставляй клады — в любых удобных местах'}
+                        title={'Работай в любых местах,\nвсе в твоих руках'}
                         description={
-                            'Например, клады прячут в лифтах, в парках под деревьями и там, где нет камер'
+                            'Например, клады прячут в парках, под деревьями и там, где нет камер'
                         }
+                        className="d-none d-lg-flex"
                     >
                         {' '}
                         <div className="d-flex justify-content-center">
@@ -29,6 +31,25 @@ export const InformationOfWork = () => {
                         </div>
                         <CircleGradient blur={80} className={styles.glowTop} />
                         <CircleGradient blur={80} className={styles.glowBottom} />
+                    </CardOfWork>
+
+                    <CardOfWork
+                        title={'Оставляй клады —\n в любых удобных местах'}
+                        description={
+                            'Например, клады прячут в лифтах, в парках \n под деревьями и там, где нет камер'
+                        }
+                        className="d-lg-none"
+                    >
+                        <KladMobile />
+                        {/* {' '}
+                        <div className="d-flex justify-content-center">
+                            <img
+                                className={cn(styles.background, 'position-absolute')}
+                                src={workAnyPlace}
+                            />
+                        </div> */}
+                        {/* <CircleGradient blur={80} className={styles.glowTop} />
+                        <CircleGradient blur={80} className={styles.glowBottom} /> */}
                     </CardOfWork>
                 </div>
                 <div className="col-12 col-lg-auto">
