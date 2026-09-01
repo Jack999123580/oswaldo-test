@@ -6,7 +6,6 @@ import styles from './Hero.module.less'
 
 export const Hero = () => {
     const openBurgerModal = useBurgerModal()
-    const handleLogin = async () => {}
 
     return (
         <section
@@ -20,7 +19,7 @@ export const Hero = () => {
                 </nav>
             </div>
             <Burger onClick={openBurgerModal} />
-            <LoginButton onClick={handleLogin} />
+            <LoginButton />
         </section>
     )
 }

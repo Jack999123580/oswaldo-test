@@ -1,15 +1,11 @@
-import type { FC } from 'react'
-
 import { LargeButton } from '../LargeButton'
 import styles from './LoginButton.module.less'
 
-type LoginButtonProps = {
-    onClick: () => void
-}
+export const LoginButton = () => {
+    const handleLogin = () => {}
 
-export const LoginButton: FC<LoginButtonProps> = ({ onClick }) => {
     return (
-        <LargeButton onClick={onClick} className={styles.login}>
+        <LargeButton onClick={handleLogin} className={styles.login}>
             Войти
         </LargeButton>
     )

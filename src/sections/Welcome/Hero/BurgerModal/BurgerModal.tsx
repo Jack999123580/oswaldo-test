@@ -13,10 +13,10 @@ export const BurgerModal = ({ open, onOpenChange }: BurgerModalProps) => {
             <Portal>
                 <Overlay className={styles.overlay} />
                 <Content className={styles.panel}>
-                    <Title className={styles.title}>title</Title>
+                    <Title className={styles.title}>Меню</Title>
                     <nav className={styles.nav}>
-                        <a href="#item-1">пункт 1</a>
-                        <a href="#item-2">пункт 2</a>
+                        <a href="#item-1">Вакансии</a>
+                        <a href="#item-2">Купить товар</a>
                     </nav>
                 </Content>
             </Portal>
