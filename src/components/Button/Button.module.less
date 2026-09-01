@@ -14,27 +14,51 @@
 .primary {
     color: #000;
     background-color: @branding-color;
-
-    &:hover,
-    &:focus,
-    &:focus-visible,
-    &:active {
-        color: #000;
-        background-color: @branding-color;
-        box-shadow: none;
-    }
-}
-
-.outline {
-    color: #fff;
-    background-color: transparent;
+    transition:
+        color 0.35s ease,
+        transform 0.35s ease;
 
     &:hover,
     &:focus,
     &:focus-visible,
     &:active {
         color: #fff;
+        background-color: @branding-color;
+        box-shadow: none;
+        transform: scale(1.04);
+    }
+}
+
+.outline {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    color: #fff;
+    background-color: transparent;
+    transition: color 0.35s ease;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background-color: @branding-color;
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: transform 0.35s ease;
+        pointer-events: none;
+    }
+
+    &:hover,
+    &:focus,
+    &:focus-visible,
+    &:active {
+        color: #000;
         background-color: transparent;
         box-shadow: none;
+
+        &::before {
+            transform: scaleX(1);
+        }
     }
 }

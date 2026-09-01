@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 
-import { Button } from '../Button'
+import { LargeButton } from '../LargeButton'
 import styles from './LoginButton.module.less'
 
 type LoginButtonProps = {
@@ -9,8 +9,8 @@ type LoginButtonProps = {
 
 export const LoginButton: FC<LoginButtonProps> = ({ onClick }) => {
     return (
-        <Button onClick={onClick} className={styles.login}>
+        <LargeButton onClick={onClick} className={styles.login}>
             Войти
-        </Button>
+        </LargeButton>
     )
 }

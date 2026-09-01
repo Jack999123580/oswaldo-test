@@ -10,6 +10,7 @@ type LargeButtonProps = {
     outline?: boolean
     className?: string
     showChevron?: boolean
+    onClick?: () => void
 }
 
 export const LargeButton: FC<LargeButtonProps> = ({
@@ -17,9 +18,10 @@ export const LargeButton: FC<LargeButtonProps> = ({
     outline,
     className,
     showChevron,
+    onClick,
 }) => {
     return (
-        <Button outline={outline} className={cn(styles.largeButton, className)}>
+        <Button onClick={onClick} outline={outline} className={cn(styles.largeButton, className)}>
             {children}
             {showChevron && <img className={styles.chevron} src={chevron} />}
         </Button>
