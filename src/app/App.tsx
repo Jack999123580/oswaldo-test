@@ -1,5 +1,6 @@
 import { AboutUs } from '../sections/AboutUs'
 import { Calculator } from '../sections/Calculator'
+import { Contacts } from '../sections/Contacts'
 import { Discounts } from '../sections/Discounts'
 import { InformationOfWork } from '../sections/InformationOfWork'
 import { Jobs } from '../sections/Jobs'
@@ -14,6 +15,7 @@ const App = () => {
             <AboutUs />
             <Jobs />
             <Discounts />
+            <Contacts />
         </>
     )
 }

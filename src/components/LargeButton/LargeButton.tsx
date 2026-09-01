@@ -2,18 +2,26 @@ import cn from 'classnames'
 import type { FC, ReactNode } from 'react'
 
 import { Button } from '../Button'
+import chevron from './assets/chevron.svg'
 import styles from './LargeButton.module.less'
 
 type LargeButtonProps = {
     children: ReactNode
     outline?: boolean
     className?: string
+    showChevron?: boolean
 }
 
-export const LargeButton: FC<LargeButtonProps> = ({ children, outline, className }) => {
+export const LargeButton: FC<LargeButtonProps> = ({
+    children,
+    outline,
+    className,
+    showChevron,
+}) => {
     return (
         <Button outline={outline} className={cn(styles.largeButton, className)}>
             {children}
+            {showChevron && <img className={styles.chevron} src={chevron} />}
         </Button>
     )
 }
