@@ -1,0 +1,72 @@
+@import '@styles/variables/_fonts.less';
+@import '@styles/variables/_sizes.less';
+
+.container {
+    padding-top: 46px;
+    padding-left: 18px;
+}
+
+.card {
+    min-height: 294px;
+    background-color: #0e1116;
+    color: #fff;
+
+    @media (min-width: @desktop-min) {
+        min-height: 415px;
+    }
+}
+
+.content {
+    position: relative;
+    z-index: 10;
+
+    @media (min-width: @desktop-min) {
+        padding-top: 74px;
+        padding-left: 42px;
+    }
+}
+
+.title {
+    font-family: @font-benzin, sans-serif;
+    font-size: 24px;
+    line-height: 1.2;
+    padding-bottom: 10px;
+
+    @media (min-width: @desktop-min) {
+        font-size: 40px;
+        padding-bottom: 12px;
+    }
+}
+
+.description {
+    font-size: 12px;
+    padding-bottom: 15px;
+
+    @media (min-width: @desktop-min) {
+        font-size: 16px;
+        padding-bottom: 32px;
+    }
+}
+
+.background {
+    left: 74px;
+    bottom: -92px;
+
+    @media (min-width: @desktop-min) {
+        left: 0px;
+        bottom: 0px;
+    }
+}
+
+.glow {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 0;
+    z-index: 5;
+}
+
+.goToTeam {
+    margin-bottom: 8px;
+    margin-right: 16px;
+}

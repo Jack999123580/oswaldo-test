@@ -9,7 +9,7 @@ export const AboutUsDesktop = () => {
     return (
         <div className={'d-none d-lg-block'}>
             <CircleGradient className={cn(styles.glow, 'position-absolute')} blur={80} />
-            <img src={background} className={'position-absolute'} alt="" />
+            <img src={background} className={cn(styles.background, 'position-absolute')} alt="" />
             <div className={cn(styles.content, 'position-relative')}>
                 <p className={cn(styles.title, 'text-uppercase')}>О нас</p>
                 <p className={styles.description}>
