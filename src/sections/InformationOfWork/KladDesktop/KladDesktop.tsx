@@ -1,7 +1,7 @@
 import cn from 'classnames'
 
 import { CircleGradient } from '../../../components/CircleGradient'
-import workAnyPlace from '../assets/workAnyPlace.png' // ломается при экспорте в svg
+import workAnyPlace from './assets/workAnyPlace.png' // ломается при экспорте в svg
 import { CardOfWork } from '../CardOfWork'
 import styles from './KladDesktop.module.less'
 
