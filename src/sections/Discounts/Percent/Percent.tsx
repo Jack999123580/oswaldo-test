@@ -1,29 +1,27 @@
 import cn from 'classnames'
 
-import { LargeButton } from '../../../components/LargeButton'
+import { CircleGradient } from '../../../components/CircleGradient'
+import background from './assets/arrow.svg'
+import percentBottom from './assets/percentBottom.svg'
+import percentLeft from './assets/percentLeft.svg'
+import percentTop from './assets/percentTop.svg'
 import styles from './Percent.module.less'
 
 export const Percent = () => {
     return (
         <div className={cn(styles.card, 'rounded-4 h-100 overflow-hidden position-relative')}>
-            {/* <div>
+            <img className={styles.percentLeft} src={percentLeft} />
+            <img className={styles.percentTop} src={percentTop} />
+            <img className={styles.percentBottom} src={percentBottom} />
+            <img className={styles.background} src={background} />
 
-                <div className={cn(styles.title, 'text-uppercase')}>
-                    Скидки своим!
-                </div>
-                <div>
-                    Для всех сотрудников магазина действуют персональные скидки.Пользуйтесь с удовольствием!
-                </div>
+            <div className={styles.content}>
+                <div className={cn('text-uppercase')}>Процент</div>
+                <div className={cn(styles.dependencies, 'text-uppercase')}>Зависит</div>
+                <div className={cn('text-uppercase')}>От опыта</div>
+            </div>
 
-                <LargeButton>
-                    Устроиться в команду
-                </LargeButton>
-
-                <LargeButton outline>
-                    Перейти в магазин
-                </LargeButton>
-
-            </div> */}
+            <CircleGradient className={styles.glow} blur={40} />
         </div>
     )
 }

@@ -1,19 +1,70 @@
-// @import '@styles/variables/_fonts.less';
-// @import '@styles/variables/_sizes.less';
+@import '@styles/variables/_fonts.less';
+@import '@styles/variables/_sizes.less';
+@import '@styles/variables/_colors.less';
 
 .card {
     min-height: 294px;
     background-color: #0e1116;
     color: #fff;
+
+    display: grid;
+    place-items: center;
 }
 
-// .title {
-//     font-family: @font-benzin, sans-serif;
-//     font-size: 24px;
-//     line-height: 1.2;
+.background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
 
-//     @media (min-width: @desktop-min) {
-//         font-size: 40px;
+.percentLeft {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+}
 
-//     }
-// }
+.percentTop {
+    position: absolute;
+    z-index: 5;
+    left: 100px;
+    top: 0;
+}
+
+.percentBottom {
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+    right: 0;
+}
+
+.glow {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    z-index: 5;
+    bottom: 0;
+    left: 0;
+}
+
+.content {
+    position: relative;
+    z-index: 10;
+    justify-self: stretch;
+    text-align: center;
+
+    font-family: @font-benzin, sans-serif;
+    font-size: 25px;
+
+    transform: rotate(-4deg);
+
+    @media (min-width: @desktop-min) {
+        font-size: 35px;
+    }
+}
+
+.dependencies {
+    color: #000000;
+    background-color: @branding-color;
+    width: 100%;
+}
