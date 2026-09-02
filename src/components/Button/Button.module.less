@@ -11,6 +11,23 @@
     }
 }
 
+.primary-interaction() {
+    color: #fff;
+    background-color: @branding-color;
+    box-shadow: none;
+    transform: scale(1.04);
+}
+
+.outline-interaction() {
+    color: #000;
+    background-color: transparent;
+    box-shadow: none;
+
+    &::before {
+        transform: scaleX(1);
+    }
+}
+
 .primary {
     color: #000;
     background-color: @branding-color;
@@ -18,14 +35,15 @@
         color 0.35s ease,
         transform 0.35s ease;
 
-    &:hover,
-    &:focus,
-    &:focus-visible,
-    &:active {
-        color: #fff;
-        background-color: @branding-color;
-        box-shadow: none;
-        transform: scale(1.04);
+    &:active,
+    &:focus-visible {
+        .primary-interaction();
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            .primary-interaction();
+        }
     }
 }
 
@@ -49,16 +67,14 @@
         pointer-events: none;
     }
 
-    &:hover,
-    &:focus,
-    &:focus-visible,
-    &:active {
-        color: #000;
-        background-color: transparent;
-        box-shadow: none;
+    &:active,
+    &:focus-visible {
+        .outline-interaction();
+    }
 
-        &::before {
-            transform: scaleX(1);
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            .outline-interaction();
         }
     }
 }
