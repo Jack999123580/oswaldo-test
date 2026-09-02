@@ -20,7 +20,7 @@ export const Contacts = () => {
                 <div className={styles.panel}>
                     <div className={styles.links}>
                         <LargeButton className={cn(styles.actionButton, 'd-lg-none')}>
-                            <span className="d-lg-none">Телеграм</span>
+                            Телеграм
                         </LargeButton>
 
                         <LargeButton className={cn(styles.actionButton, 'd-none d-lg-block')}>
