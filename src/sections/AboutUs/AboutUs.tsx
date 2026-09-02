@@ -10,7 +10,7 @@ export const AboutUs = () => {
     const { sectionRef, imageRef, cardRef } = useAboutUsSectionAnimation()
 
     return (
-        <section ref={sectionRef} className="container py-4 py-lg-5">
+        <section ref={sectionRef} className="container py-4 py-lg-5 overflow-hidden">
             <div className="row g-3">
                 <div ref={imageRef} className="col-12 col-lg-4 order-1 order-lg-2">
                     <img

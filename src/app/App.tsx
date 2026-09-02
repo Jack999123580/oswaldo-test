@@ -1,6 +1,7 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useEffect } from 'react'
 
 import { AboutUs } from '../sections/AboutUs'
 import { Calculator } from '../sections/Calculator'
@@ -9,10 +10,19 @@ import { Discounts } from '../sections/Discounts'
 import { InformationOfWork } from '../sections/InformationOfWork'
 import { Jobs } from '../sections/Jobs'
 import { Welcome } from '../sections/Welcome'
+import { fetchNavigationLinks } from '../stores'
 
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 const App = () => {
+    useEffect(() => {
+        const timeoutId = fetchNavigationLinks()
+
+        return () => {
+            window.clearTimeout(timeoutId)
+        }
+    }, [])
+
     return (
         <>
             <Welcome />

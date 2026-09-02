@@ -9,6 +9,8 @@ export const useAboutUsSectionAnimation = () => {
 
     useGSAP(
         () => {
+            gsap.set(sectionRef.current, { overflow: 'hidden' })
+
             gsap.timeline({
                 defaults: { ease: 'power3.out', duration: 0.5 },
                 scrollTrigger: {
