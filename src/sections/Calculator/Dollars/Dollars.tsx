@@ -1,5 +1,5 @@
 import cn from 'classnames'
-import type { FC } from 'react'
+import type { Ref } from 'react'
 
 import { CircleGradient } from '../../../components/CircleGradient'
 import { formatNumberWithSpaces } from '../../../utils'
@@ -13,11 +13,12 @@ import styles from './Dollars.module.less'
 
 type DollarsProps = {
     income: number
+    ref?: Ref<HTMLDivElement>
 }
 
-export const Dollars: FC<DollarsProps> = ({ income }) => {
+export const Dollars = ({ income, ref }: DollarsProps) => {
     return (
-        <div className={styles.result}>
+        <div ref={ref} className={styles.result}>
             <CircleGradient blur={80} className={styles.glowFront} />
             <img src={leafTopRight} alt="" className={styles.leafTopRight} />
             <img src={leafCenter} alt="" className={styles.leafCenter} />
