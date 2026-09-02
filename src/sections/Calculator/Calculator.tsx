@@ -6,7 +6,12 @@ import { Button } from '../../components/Button'
 import { RangeInput } from '../../components/RangeInput'
 import { Select } from '../../components/Select'
 import styles from './Calculator.module.less'
-import { CITY_OPTIONS, PRICE_PER_GRAM, WEIGHT_OPTIONS } from './constants'
+import {
+    CITY_OPTIONS,
+    PRICE_PER_GRAM_BY_WORK_TYPE,
+    WEIGHT_OPTIONS,
+    WORK_TYPE_OPTIONS,
+} from './constants'
 import { Dollars } from './Dollars'
 import { useCalcularorSectionAnimation } from './useCalcularorSectionAnimation'
 
@@ -14,6 +19,7 @@ export const Calculator = () => {
     const { enqueueSnackbar } = useSnackbar()
     const [city, setCity] = useState('')
     const [weight, setWeight] = useState('')
+    const [workType, setWorkType] = useState('')
     const [dropsPerDay, setDropsPerDay] = useState(15)
     const [daysInMonth, setDaysInMonth] = useState(20)
     const [income, setIncome] = useState(0)
@@ -21,7 +27,7 @@ export const Calculator = () => {
         useCalcularorSectionAnimation()
 
     const handleCalculate = () => {
-        if (!city && !weight) {
+        if (!city && !weight && !workType) {
             enqueueSnackbar('Не выбран город и вес', { variant: 'error' })
             return
         }
@@ -36,7 +42,15 @@ export const Calculator = () => {
             return
         }
 
-        setIncome(Number(weight) * dropsPerDay * daysInMonth * PRICE_PER_GRAM)
+        if (!workType) {
+            enqueueSnackbar('Не выбран тип работы', { variant: 'error' })
+            return
+        }
+
+        const pricePerGram =
+            PRICE_PER_GRAM_BY_WORK_TYPE[workType as keyof typeof PRICE_PER_GRAM_BY_WORK_TYPE]
+
+        setIncome(Number(weight) * dropsPerDay * daysInMonth * pricePerGram)
     }
 
     // Возможно какая-то логика для отдельных городов
@@ -55,18 +69,25 @@ export const Calculator = () => {
 
                             <div ref={formRef} className="d-flex flex-column gap-3 gap-lg-4">
                                 <div className="row g-2">
-                                    <div className="col-12 col-lg-6">
+                                    <div className="col-12 col-lg-4">
                                         <Select
                                             placeholder="Город"
                                             options={CITY_OPTIONS}
                                             onValueChange={setCity}
                                         />
                                     </div>
-                                    <div className="col-12 col-lg-6">
+                                    <div className="col-12 col-lg-4">
                                         <Select
                                             placeholder="Вес товара"
                                             options={WEIGHT_OPTIONS}
                                             onValueChange={setWeight}
+                                        />
+                                    </div>
+                                    <div className="col-12 col-lg-4">
+                                        <Select
+                                            placeholder="Тип работы"
+                                            options={WORK_TYPE_OPTIONS}
+                                            onValueChange={setWorkType}
                                         />
                                     </div>
                                 </div>

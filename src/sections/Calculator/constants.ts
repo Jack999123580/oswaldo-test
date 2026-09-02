@@ -13,4 +13,12 @@ export const WEIGHT_OPTIONS = [
     { value: '2', label: '2 г' },
 ]
 
-export const PRICE_PER_GRAM = 1600
+export const WORK_TYPE_OPTIONS = [
+    { value: 'courier', label: 'Курьер' },
+    { value: 'warehouse', label: 'Склад' },
+]
+
+export const PRICE_PER_GRAM_BY_WORK_TYPE = {
+    courier: 640,
+    warehouse: 800,
+} as const
