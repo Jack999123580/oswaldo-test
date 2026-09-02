@@ -9,16 +9,19 @@ import styles from './InformationOfWork.module.less'
 import { KladDesktop } from './KladDesktop'
 import { KladMobile } from './KladModbile'
 import { Title } from './Title'
+import { useInformationOfWorkSectionAnimation } from './useInformationOfWorkSectionAnimation'
 
 export const InformationOfWork = () => {
+    const { sectionRef, cardRefs } = useInformationOfWorkSectionAnimation()
+
     return (
-        <section className="container py-4 py-lg-5">
+        <section ref={sectionRef} className="container py-4 py-lg-5">
             <div className={cn(styles.row, 'row g-3 justify-content-lg-center')}>
-                <div className="col-12 col-lg-auto  d-lg-block">
+                <div ref={cardRefs.first} className="col-12 col-lg-auto  d-lg-block">
                     <KladDesktop />
                     <KladMobile />
                 </div>
-                <div className="col-12 col-lg-auto">
+                <div ref={cardRefs.second} className="col-12 col-lg-auto">
                     <CardOfWork
                         title={'Обучаем с нуля — всё покажем и расскажем'}
                         description={
@@ -37,7 +40,7 @@ export const InformationOfWork = () => {
                         <CircleGradient blur={80} className={styles.glowMiddleCardBottom} />
                     </CardOfWork>
                 </div>
-                <div className="col-12 col-lg-auto">
+                <div ref={cardRefs.third} className="col-12 col-lg-auto">
                     <CardOfWork
                         title={'Нет графика работы'}
                         description={'Поэтому можно совмещать работу и учебу с работой курьером'}

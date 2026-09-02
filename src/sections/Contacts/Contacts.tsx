@@ -3,13 +3,19 @@ import cn from 'classnames'
 import { LargeButton } from '../../components/LargeButton'
 import background from './assets/background.svg'
 import styles from './Contacts.module.less'
+import { useContactsSectionAnimation } from './useContactsSectionAnimation'
 
 export const Contacts = () => {
+    const { sectionRef, cardRef } = useContactsSectionAnimation()
+
     return (
-        <section className={cn(styles.content, 'container overflow-hidden position-relative')}>
+        <section
+            ref={sectionRef}
+            className={cn(styles.content, 'container overflow-hidden position-relative')}
+        >
             <img className={'position-absolute'} src={background} alt="" />
 
-            <div className={styles.card}>
+            <div ref={cardRef} className={styles.card}>
                 <div className={styles.title}>Связаться</div>
                 <div className={styles.panel}>
                     <div className={styles.links}>

@@ -2,8 +2,6 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { useRef } from 'react'
 
-gsap.registerPlugin(useGSAP)
-
 export const useMainScreenAnimation = () => {
     const catRef = useRef<HTMLSpanElement>(null)
     const arrowRef = useRef<HTMLSpanElement>(null)
