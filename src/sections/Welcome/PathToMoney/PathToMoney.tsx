@@ -6,8 +6,11 @@ import bitcoinIcon from './assets/bitcoin.svg'
 import catIcon from './assets/cat.svg'
 import styles from './PathToMoney.module.less'
 import { Title } from './Title'
+import { useMainScreenAnimation } from './useMainScreenAnimation'
 
 export const PathToMoney = () => {
+    const { catRef, arrowRef, bitcoinRef, buttonsRef, lineRefs } = useMainScreenAnimation()
+
     return (
         <section
             className={cn(
@@ -16,14 +19,18 @@ export const PathToMoney = () => {
             )}
         >
             <div className="position-relative">
-                <img src={catIcon} className={cn(styles.cat, 'position-absolute z-2')} />
-                <Title />
-                <img src={arrowIcon} className={cn(styles.arrow, 'position-absolute z-1')} alt="" />
-                <div className={cn(styles.bitcoin, 'position-absolute z-2')}>
+                <span ref={catRef} className={cn(styles.cat, 'position-absolute z-2')}>
+                    <img src={catIcon} alt="" />
+                </span>
+                <Title lineRefs={lineRefs} />
+                <span ref={arrowRef} className={cn(styles.arrow, 'position-absolute z-1')}>
+                    <img src={arrowIcon} alt="" />
+                </span>
+                <div ref={bitcoinRef} className={cn(styles.bitcoin, 'position-absolute z-2')}>
                     <img src={bitcoinIcon} className="d-block" alt="" />
                 </div>
             </div>
-            <ActionButtons />
+            <ActionButtons ref={buttonsRef} />
         </section>
     )
 }

@@ -11,11 +11,13 @@
         "format:check": "prettier --check ."
     },
     "dependencies": {
+        "@gsap/react": "^2.1.2",
         "@radix-ui/react-dialog": "^1.1.23",
         "@radix-ui/react-select": "^2.3.7",
         "@radix-ui/react-slider": "^1.4.7",
         "bootstrap": "^5.3.8",
         "classnames": "^2.5.1",
+        "gsap": "^3.15.0",
         "less": "^4.4.0",
         "notistack": "^3.0.2",
         "react": "^19.1.0",

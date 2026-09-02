@@ -18,12 +18,21 @@
     width: 73px;
     height: 28px;
 
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
     @media (min-width: @desktop-min) {
         right: 302px;
         bottom: -72px;
         width: 150px;
         height: 58px;
-        transform: scale(1.2);
+
+        img {
+            transform: scale(1.2);
+        }
     }
 }
 
@@ -32,7 +41,13 @@
     left: 10px;
     width: 56px;
     height: 56px;
-    transform: rotate(-13deg);
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        transform: rotate(-13deg);
+    }
 
     @media (min-width: @desktop-min) {
         top: -84px;
